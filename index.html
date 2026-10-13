@@ -1,0 +1,636 @@
+<!doctype html>
+<html lang="es-AR" data-tema="claro">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tech&amp;Grow — Tus campañas, explicadas</title>
+  <meta name="description" content="Tech&Grow reúne tus campañas de Meta y Google, tus clientes y tu equipo en un solo lugar, con un asistente de IA que calcula, proyecta y explica. IA incluida sin cargo. Agendá una demo.">
+  <meta name="theme-color" content="#f6f5f1">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Tech&Grow — Tus campañas, explicadas">
+  <meta property="og:description" content="Meta y Google, clientes y equipo en un solo lugar, con IA integrada sin cargo o la IA que ya usás.">
+  <meta property="og:image" content="assets/img/icono-512.png">
+  <link rel="icon" href="assets/img/logo.svg" type="image/svg+xml">
+  <link rel="icon" href="favicon.ico" sizes="any">
+  <link rel="icon" href="assets/img/icono-192.png" sizes="192x192" type="image/png">
+  <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+  <script>
+    // Mismo criterio que la app: tema guardado en tg:tema, o el del sistema. Antes de pintar.
+    try { var p = localStorage.getItem('tg:tema') || 'sistema'; document.documentElement.dataset.tema = p === 'oscuro' || (p === 'sistema' && matchMedia('(prefers-color-scheme: dark)').matches) ? 'oscuro' : 'claro'; } catch (e) { document.documentElement.dataset.tema = 'claro'; }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Literata:ital,opsz,wght@0,7..72,400..800;1,7..72,400..700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+  <a class="saltar" href="#main">Saltar al contenido</a>
+
+  <!-- ================= NAV ================= -->
+  <header class="nav" data-nav>
+    <div class="contenedor nav__fila">
+      <a href="#inicio" class="marca" aria-label="Tech&Grow, inicio">
+        <img class="marca__logo" src="assets/img/logo.svg" alt="" width="30" height="30">
+        <span class="marca__texto">Tech<span class="marca__amp">&amp;</span>Grow</span>
+      </a>
+      <nav class="nav__links" aria-label="Principal">
+        <a href="#producto">Producto</a>
+        <a href="#pista">La pista</a>
+        <a href="#rangos">Rangos</a>
+        <a href="#como-funciona">Cómo funciona</a>
+        <a href="#ia">IA</a>
+        <a href="#preguntas">Preguntas</a>
+      </nav>
+      <div class="nav__acciones">
+        <button class="tema" type="button" data-tema-boton aria-label="Cambiar a modo oscuro">
+          <svg class="ic ic--sol" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+          <svg class="ic ic--luna" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"/></svg>
+        </button>
+        <a class="boton boton--primario boton--chico nav__cta" href="#demo">Agendar demo</a>
+        <button class="nav__menu" type="button" aria-label="Abrir menú" aria-expanded="false" data-menu-boton>
+          <span></span><span></span>
+        </button>
+      </div>
+    </div>
+    <div class="nav__movil" data-menu hidden>
+      <a href="#producto">Producto</a>
+      <a href="#pista">La pista</a>
+      <a href="#rangos">Rangos</a>
+      <a href="#como-funciona">Cómo funciona</a>
+      <a href="#ia">IA</a>
+      <a href="#preguntas">Preguntas</a>
+      <a class="boton boton--primario" href="#demo">Agendar demo</a>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- ================= HERO ================= -->
+    <section class="hero" id="inicio">
+      <div class="contenedor hero__rejilla">
+        <div class="hero__texto">
+          <span class="etiqueta revelar"><span class="etiqueta__punto"></span>IA integrada sin cargo</span>
+          <h1 class="hero__titulo revelar" style="--d:.06s">Tus campañas,<br><em>explicadas.</em></h1>
+          <p class="hero__bajada revelar" style="--d:.12s">
+            Tech&amp;Grow reúne <strong>Meta y Google</strong>, tus clientes y tu equipo en un solo lugar,
+            con un asistente de IA que <strong>calcula, proyecta y explica</strong> en lenguaje simple.
+          </p>
+          <div class="hero__acciones revelar" style="--d:.18s">
+            <a class="boton boton--primario boton--grande" data-mailto href="mailto:nrrosendi@gmail.com?subject=Quiero%20agendar%20una%20demo%20de%20Tech%26Grow">
+              Agendar una demo por mail
+              <svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+            <a class="boton boton--grande" href="#como-funciona">Ver cómo funciona</a>
+          </div>
+          <ul class="hero__checks revelar" style="--d:.24s">
+            <li><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4 4 10-10"/></svg>Meta y Google en un tablero</li>
+            <li><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4 4 10-10"/></svg>Desde la compu o el celu</li>
+            <li><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4 4 10-10"/></svg>Demo personalizada</li>
+          </ul>
+        </div>
+
+        <!-- Maqueta de la app -->
+        <div class="escena" data-paralaje aria-hidden="true">
+          <div class="app vidrio flotar" data-prof="6">
+            <aside class="app__lateral">
+              <div class="app__marca"><img src="assets/img/logo.svg" alt="" width="22" height="22"><b>Tech<span>&amp;</span>Grow</b></div>
+              <span class="app__item app__item--asistente"><svg class="ic" viewBox="0 0 24 24"><path d="M12 3l1.8 4.7 4.7 1.8-4.7 1.8L12 16l-1.8-4.7-4.7-1.8 4.7-1.8z"/></svg>Asistente</span>
+              <span class="app__item activo"><svg class="ic" viewBox="0 0 24 24"><path d="M4 11l8-7 8 7v9H4z"/></svg>Inicio</span>
+              <span class="app__item"><svg class="ic" viewBox="0 0 24 24"><rect x="4" y="4" width="7" height="7" rx="1.5"/><rect x="13" y="4" width="7" height="7" rx="1.5"/><rect x="4" y="13" width="7" height="7" rx="1.5"/><rect x="13" y="13" width="7" height="7" rx="1.5"/></svg>Tableros</span>
+              <span class="app__item"><svg class="ic" viewBox="0 0 24 24"><path d="M4 17l5-5 4 4 7-8"/></svg>Campañas</span>
+              <span class="app__item"><svg class="ic" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.5"/><path d="M3 20a6 6 0 0 1 12 0M16 4.5a3.5 3.5 0 0 1 0 7M21 20a6 6 0 0 0-4-5.6"/></svg>Clientes</span>
+              <span class="app__item"><svg class="ic" viewBox="0 0 24 24"><path d="M4 5h16v11H8l-4 4z"/></svg>Equipo</span>
+            </aside>
+            <div class="app__area">
+              <div class="app__saludo">
+                <b>Buen día, Sofi</b>
+                <small>3 campañas activas · actualizado hace 2 min</small>
+              </div>
+              <div class="app__pistas">
+                <div class="mini-pista">
+                  <div class="mini-pista__nombre">Remarketing · Meta</div>
+                  <div class="mini-pista__recorrido"><span class="asfalto"></span><span class="gasto" style="--g:64%"></span><span class="avion" style="--a:68%"></span></div>
+                  <b class="mini-pista__cifra">64%</b>
+                </div>
+                <div class="mini-pista">
+                  <div class="mini-pista__nombre">Búsqueda · Google</div>
+                  <div class="mini-pista__recorrido"><span class="asfalto"></span><span class="gasto" style="--g:79%"></span><span class="avion" style="--a:68%"></span></div>
+                  <b class="mini-pista__cifra">79%</b>
+                </div>
+                <div class="mini-pista">
+                  <div class="mini-pista__nombre">Lanzamiento · Meta</div>
+                  <div class="mini-pista__recorrido"><span class="asfalto"></span><span class="gasto" style="--g:52%"></span><span class="avion" style="--a:68%"></span></div>
+                  <b class="mini-pista__cifra">52%</b>
+                </div>
+              </div>
+              <div class="app__grafico">
+                <div class="app__kpis">
+                  <div><small>Conversiones</small><b data-contar="1284">0</b></div>
+                  <div><small>CPA</small><b>$<span data-contar="3210">0</span></b></div>
+                  <div class="ocultar-chico"><small>ROAS</small><b>4,2×</b></div>
+                </div>
+                <svg viewBox="0 0 320 96" preserveAspectRatio="none">
+                  <path class="trazo trazo--naranja" d="M0 82 C30 78 50 80 74 70 S118 58 144 60 S190 42 214 40 S262 22 288 18 L320 10" fill="none" stroke-width="2.5" stroke-linecap="round"/>
+                  <path class="trazo trazo--azul" style="--d:.3s" d="M0 88 C40 86 70 84 100 80 S160 74 190 70 S260 60 320 54" fill="none" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+              </div>
+            </div>
+          </div>
+
+          <div class="burbuja burbuja--ia vidrio flotar" style="--d:.35s" data-prof="20">
+            <div class="burbuja__cab"><svg class="ic" viewBox="0 0 24 24"><path d="M12 3l1.8 4.7 4.7 1.8-4.7 1.8L12 16l-1.8-4.7-4.7-1.8 4.7-1.8z"/></svg>Asistente</div>
+            <div class="veredicto-mini">
+              <span class="veredicto-mini__icono">✓</span>
+              <div><small>Bien</small><p>El CPA bajó <b>14%</b>. Si seguís así, cerrás el mes con <b>~1.820</b> conversiones.</p></div>
+            </div>
+          </div>
+
+          <div class="burbuja burbuja--sube vidrio flotar" style="--d:.5s" data-prof="16">
+            <svg class="ic" viewBox="0 0 24 24"><path d="M4 17l5-5 4 4 7-8M14 8h6v6"/></svg>
+            <div><b>+18%</b><small>conversiones vs. mes anterior</small></div>
+          </div>
+
+          <div class="burbuja burbuja--equipo vidrio flotar" style="--d:.65s" data-prof="10">
+            <span class="avatares"><i>VR</i><i>MT</i><i>CL</i></span>
+            <span class="rango-insignia rango-insignia--chief">Chief</span>
+            <span class="rango-insignia rango-insignia--senior">Senior</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="cinta" aria-label="Lo que reúne Tech&Grow">
+        <div class="cinta__pista">
+          <span>Meta Ads</span><span>Google Ads</span><span>Tableros</span><span>Asistente IA</span><span>Clientes</span><span>CRM</span><span>Planillas</span><span>Documentos</span><span>Diapositivas</span><span>Chat del equipo</span><span>Notificaciones</span><span>Dictado por voz</span>
+          <span aria-hidden="true">Meta Ads</span><span aria-hidden="true">Google Ads</span><span aria-hidden="true">Tableros</span><span aria-hidden="true">Asistente IA</span><span aria-hidden="true">Clientes</span><span aria-hidden="true">CRM</span><span aria-hidden="true">Planillas</span><span aria-hidden="true">Documentos</span><span aria-hidden="true">Diapositivas</span><span aria-hidden="true">Chat del equipo</span><span aria-hidden="true">Notificaciones</span><span aria-hidden="true">Dictado por voz</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= PRODUCTO ================= -->
+    <section class="seccion" id="producto">
+      <div class="contenedor">
+        <header class="seccion__cab revelar">
+          <p class="sobretitulo">Todo en un solo lugar</p>
+          <h2>Dejá de saltar entre administradores de anuncios, planillas y chats.</h2>
+          <p>Tech&amp;Grow conecta tus cuentas publicitarias y pone todo lo demás alrededor: clientes, reportes y equipo, sobre los mismos datos.</p>
+        </header>
+
+        <div class="bento">
+          <article class="tarjeta tarjeta--grande revelar">
+            <div>
+              <span class="objeto"><svg class="ic" viewBox="0 0 24 24"><rect x="4" y="4" width="7" height="7" rx="1.5"/><rect x="13" y="4" width="7" height="7" rx="1.5"/><rect x="4" y="13" width="7" height="7" rx="1.5"/><rect x="13" y="13" width="7" height="7" rx="1.5"/></svg></span>
+              <h3>Tableros que se arman solos</h3>
+              <p>Gráficos interactivos de Meta y Google lado a lado. Armá tu inicio a medida y compartí un tablero con tu cliente por enlace.</p>
+            </div>
+            <div class="mini-tablero">
+              <div class="mini-tablero__widget"><small>Inversión</small><b>$1,2 M</b><span class="sube">▲ 9%</span></div>
+              <div class="mini-tablero__widget"><small>Conversiones</small><b>1.284</b><span class="sube">▲ 18%</span></div>
+              <div class="mini-tablero__widget mini-tablero__widget--ancho">
+                <svg viewBox="0 0 300 80" preserveAspectRatio="none">
+                  <g class="barras-mini">
+                    <rect x="8" y="44" width="18" height="36" rx="3"/><rect x="44" y="34" width="18" height="46" rx="3"/><rect x="80" y="40" width="18" height="40" rx="3"/><rect x="116" y="24" width="18" height="56" rx="3"/><rect x="152" y="30" width="18" height="50" rx="3"/><rect x="188" y="16" width="18" height="64" rx="3"/><rect x="224" y="22" width="18" height="58" rx="3"/><rect x="260" y="8" width="18" height="72" rx="3"/>
+                  </g>
+                </svg>
+              </div>
+            </div>
+          </article>
+
+          <article class="tarjeta revelar" style="--d:.05s">
+            <span class="objeto objeto--naranja"><svg class="ic" viewBox="0 0 24 24"><path d="M12 3l1.8 4.7 4.7 1.8-4.7 1.8L12 16l-1.8-4.7-4.7-1.8 4.7-1.8zM18 15l.9 2.1 2.1.9-2.1.9L18 21l-.9-2.1-2.1-.9 2.1-.9z"/></svg></span>
+            <h3>Asistente que calcula y explica</h3>
+            <p>Preguntale en criollo. Consulta tus cuentas, hace las cuentas y te devuelve un veredicto claro.</p>
+          </article>
+
+          <article class="tarjeta revelar" style="--d:.1s">
+            <span class="objeto"><svg class="ic" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.5"/><path d="M3 20a6 6 0 0 1 12 0M16 4.5a3.5 3.5 0 0 1 0 7M21 20a6 6 0 0 0-4-5.6"/></svg></span>
+            <h3>Clientes y CRM</h3>
+            <p>Cada cliente con sus campañas, su historial y sus credenciales, ordenado y a mano.</p>
+          </article>
+
+          <article class="tarjeta revelar" style="--d:.15s">
+            <span class="objeto"><svg class="ic" viewBox="0 0 24 24"><path d="M7 3h7l5 5v13H7zM14 3v5h5M10 13h6M10 17h6"/></svg></span>
+            <h3>Documentos, planillas y diapositivas</h3>
+            <p>Del dato al informe sin exportar nada. La IA te ayuda a redactarlo.</p>
+          </article>
+
+          <article class="tarjeta revelar" style="--d:.2s">
+            <span class="objeto objeto--naranja"><svg class="ic" viewBox="0 0 24 24"><path d="M4 5h16v11H8l-4 4z"/></svg></span>
+            <h3>Chat del equipo</h3>
+            <p>Canales, grupos y adjuntos al lado de los datos. Se acabó copiar capturas al chat.</p>
+          </article>
+
+          <article class="tarjeta revelar" style="--d:.25s">
+            <span class="objeto"><svg class="ic" viewBox="0 0 24 24"><path d="M9 7V3M15 7V3M7 7h10v4a5 5 0 0 1-10 0zM12 16v5"/></svg></span>
+            <h3>Conectores</h3>
+            <p>Meta y Google conectados una vez. Los datos llegan solos y siempre al día.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= LA PISTA ================= -->
+    <section class="seccion seccion--tinte" id="pista">
+      <div class="contenedor pista-rejilla">
+        <header class="seccion__cab seccion__cab--izq revelar">
+          <p class="sobretitulo">La firma de Tech&amp;Grow</p>
+          <h2>Cada campaña es una <em>pista.</em></h2>
+          <p>De un vistazo sabés cuánto gastaste, cuánto te queda y si vas en ritmo. Sin abrir una sola planilla.</p>
+          <ul class="leyenda-pista">
+            <li><i class="l-gasto"></i>Gasto acumulado</li>
+            <li><i class="l-avion"></i>Dónde deberías estar hoy</li>
+            <li><i class="l-asfalto"></i>Presupuesto del mes</li>
+          </ul>
+        </header>
+
+        <div class="pistas revelar" style="--d:.1s" data-pistas>
+          <div class="pista vidrio">
+            <div><div class="pista__nombre">Remarketing</div><div class="pista__meta">Meta · Distribuidora Sur</div></div>
+            <div class="pista__recorrido">
+              <div class="pista__asfalto"><div class="pista__gasto" style="--g:66%"></div></div>
+              <div class="pista__avion" style="--a:68%" data-texto="Hoy"></div>
+            </div>
+            <div class="pista__estado"><span class="mini mini--ok">En ritmo</span><b>$396.000</b><span>de $600.000</span></div>
+          </div>
+          <div class="pista vidrio">
+            <div><div class="pista__nombre">Búsqueda de marca</div><div class="pista__meta">Google · Almacén Verde</div></div>
+            <div class="pista__recorrido">
+              <div class="pista__asfalto"><div class="pista__gasto" style="--g:86%"></div></div>
+              <div class="pista__avion" style="--a:68%" data-texto="Hoy"></div>
+            </div>
+            <div class="pista__estado"><span class="mini mini--alerta">Adelantada</span><b>$258.000</b><span>de $300.000</span></div>
+          </div>
+          <div class="pista vidrio">
+            <div><div class="pista__nombre">Lanzamiento otoño</div><div class="pista__meta">Meta · Estudio Norte</div></div>
+            <div class="pista__recorrido">
+              <div class="pista__asfalto"><div class="pista__gasto" style="--g:41%"></div></div>
+              <div class="pista__avion" style="--a:68%" data-texto="Hoy"></div>
+            </div>
+            <div class="pista__estado"><span class="mini mini--info">Atrasada</span><b>$164.000</b><span>de $400.000</span></div>
+          </div>
+          <p class="pista__nota">Datos de ejemplo. El asistente te avisa cuando una campaña se adelanta o se atrasa.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= RANGOS / JERARQUÍA ================= -->
+    <section class="seccion" id="rangos">
+      <div class="contenedor">
+        <header class="seccion__cab revelar">
+          <p class="sobretitulo">Jerarquía clara</p>
+          <h2>Cuatro rangos. Cada persona ve <em>lo que necesita.</em></h2>
+          <p>Los permisos se definen por ventana de la app. Tocá un rango para ver qué puede hacer.</p>
+        </header>
+
+        <div class="rangos">
+          <div class="piramide revelar" role="tablist" aria-label="Rangos del equipo">
+            <button class="piramide__nivel activo" role="tab" aria-selected="true" data-rango="0" style="--w:46%">
+              <span class="rango-insignia rango-insignia--admin">Admin</span><small>Dirección</small>
+            </button>
+            <button class="piramide__nivel" role="tab" aria-selected="false" data-rango="1" style="--w:64%">
+              <span class="rango-insignia rango-insignia--chief">Chief</span><small>Líder de cuentas</small>
+            </button>
+            <button class="piramide__nivel" role="tab" aria-selected="false" data-rango="2" style="--w:82%">
+              <span class="rango-insignia rango-insignia--senior">Senior</span><small>Analista</small>
+            </button>
+            <button class="piramide__nivel" role="tab" aria-selected="false" data-rango="3" style="--w:100%">
+              <span class="rango-insignia rango-insignia--junior">Junior</span><small>Asistente de cuentas</small>
+            </button>
+            <p class="piramide__pie">
+              <svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l7 3v5c0 4.5-3 8.5-7 10-4-1.5-7-5.5-7-10V6z"/></svg>
+              Valores por defecto: el Admin los ajusta ventana por ventana.
+            </p>
+          </div>
+
+          <div class="rangos__panel tarjeta revelar" style="--d:.1s" role="tabpanel" aria-live="polite" data-rango-panel>
+            <span class="rango-insignia rango-insignia--admin" data-rango-insignia>Admin</span>
+            <h3 data-rango-titulo>Ve y configura todo</h3>
+            <p data-rango-desc></p>
+            <p class="rangos__sub">Ventanas habilitadas</p>
+            <div class="permisos-chips" data-rango-ventanas></div>
+            <p class="rangos__sub">Qué hace en el día a día</p>
+            <ul class="lista-check" data-rango-tareas></ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= CICLO ================= -->
+    <section class="seccion seccion--tinte" id="ciclo">
+      <div class="contenedor">
+        <header class="seccion__cab revelar">
+          <p class="sobretitulo">Cómo trabaja por dentro</p>
+          <h2>Del clic en el anuncio a la decisión, <em>sin pasos en el medio.</em></h2>
+        </header>
+        <ol class="ciclo">
+          <li class="ciclo__paso tarjeta revelar">
+            <span class="ciclo__n">01</span>
+            <span class="objeto"><svg class="ic" viewBox="0 0 24 24"><path d="M9 7V3M15 7V3M7 7h10v4a5 5 0 0 1-10 0zM12 16v5"/></svg></span>
+            <h3>Conecta</h3>
+            <p>Trae los datos de Meta y Google de cada cliente, siempre actualizados.</p>
+          </li>
+          <li class="ciclo__paso tarjeta revelar" style="--d:.08s">
+            <span class="ciclo__n">02</span>
+            <span class="objeto"><svg class="ic" viewBox="0 0 24 24"><path d="M5 19V9M12 19V5M19 19v-7"/></svg></span>
+            <h3>Calcula</h3>
+            <p>CPA, ROAS, ritmo de gasto y comparaciones, sin fórmulas a mano.</p>
+          </li>
+          <li class="ciclo__paso tarjeta revelar" style="--d:.16s">
+            <span class="ciclo__n">03</span>
+            <span class="objeto objeto--naranja"><svg class="ic" viewBox="0 0 24 24"><path d="M4 17l5-5 4 4"/><path d="M13 16l7-8" stroke-dasharray="2 2.5"/></svg></span>
+            <h3>Proyecta</h3>
+            <p>Estima cómo cerrás el mes si seguís igual, y qué pasa si cambiás algo.</p>
+          </li>
+          <li class="ciclo__paso tarjeta revelar" style="--d:.24s">
+            <span class="ciclo__n">04</span>
+            <span class="objeto objeto--naranja"><svg class="ic" viewBox="0 0 24 24"><path d="M12 3l1.8 4.7 4.7 1.8-4.7 1.8L12 16l-1.8-4.7-4.7-1.8 4.7-1.8z"/></svg></span>
+            <h3>Explica</h3>
+            <p>Te lo cuenta en lenguaje simple, listo para decidir o para mandarle al cliente.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ================= CÓMO FUNCIONA (teléfono fijo) ================= -->
+    <section class="seccion" id="como-funciona">
+      <div class="contenedor">
+        <header class="seccion__cab revelar">
+          <p class="sobretitulo">Así de simple</p>
+          <h2>Empezás en cuatro pasos. <em>Sin vueltas.</em></h2>
+        </header>
+
+        <div class="relato">
+          <div class="relato__pasos">
+            <button class="paso-relato activo" type="button" data-paso="0">
+              <span class="paso-relato__n">1</span>
+              <span><b>Conectá Meta y Google</b><span>Vinculás tus cuentas publicitarias una sola vez y elegís qué clientes y campañas traer.</span></span>
+            </button>
+            <button class="paso-relato" type="button" data-paso="1">
+              <span class="paso-relato__n">2</span>
+              <span><b>Sumá a tu equipo con su rango</b><span>Invitás a cada persona como Admin, Chief, Senior o Junior. Cada uno ve sólo sus ventanas.</span></span>
+            </button>
+            <button class="paso-relato" type="button" data-paso="2">
+              <span class="paso-relato__n">3</span>
+              <span><b>Armá tableros y compartilos</b><span>Elegís los gráficos que importan y compartís una vista pública con tu cliente.</span></span>
+            </button>
+            <button class="paso-relato" type="button" data-paso="3">
+              <span class="paso-relato__n">4</span>
+              <span><b>Preguntale al asistente</b><span>Escribí o dictá tu pregunta. Calcula, proyecta y te explica qué hacer.</span></span>
+            </button>
+          </div>
+
+          <div class="relato__fijo" aria-hidden="true">
+            <div class="telefono">
+              <div class="telefono__isla"></div>
+              <div class="telefono__pantalla" data-pantallas>
+                <div class="pantalla activa">
+                  <div class="pt-titulo">Conectores</div>
+                  <div class="pt-conector"><span class="pt-logo pt-logo--meta">M</span><div><b>Meta Ads</b><small>4 cuentas · 12 campañas</small></div><span class="mini mini--ok">Conectado</span></div>
+                  <div class="pt-conector"><span class="pt-logo pt-logo--google">G</span><div><b>Google Ads</b><small>2 cuentas · 7 campañas</small></div><span class="mini mini--ok">Conectado</span></div>
+                  <div class="pt-boton">Importar campañas</div>
+                </div>
+                <div class="pantalla">
+                  <div class="pt-titulo">Equipo</div>
+                  <div class="pt-persona"><i>VR</i><div><b>Valeria R.</b><small>Dirección</small></div><span class="rango-insignia rango-insignia--admin">Admin</span></div>
+                  <div class="pt-persona"><i>MT</i><div><b>Martín T.</b><small>Cuentas</small></div><span class="rango-insignia rango-insignia--chief">Chief</span></div>
+                  <div class="pt-persona"><i>CL</i><div><b>Camila L.</b><small>Análisis</small></div><span class="rango-insignia rango-insignia--senior">Senior</span></div>
+                  <div class="pt-persona"><i>JP</i><div><b>Juan P.</b><small>Soporte</small></div><span class="rango-insignia rango-insignia--junior">Junior</span></div>
+                </div>
+                <div class="pantalla">
+                  <div class="pt-titulo">Tablero · Almacén Verde</div>
+                  <div class="pt-kpis"><div><small>Inversión</small><b>$300 mil</b></div><div><small>ROAS</small><b>4,2×</b></div></div>
+                  <div class="pt-barras"><span style="--h:38%"></span><span style="--h:52%"></span><span style="--h:46%"></span><span style="--h:70%"></span><span style="--h:64%"></span><span style="--h:88%"></span></div>
+                  <div class="pt-compartir"><svg class="ic" viewBox="0 0 24 24"><path d="M10 14a4 4 0 0 0 5.7 0l3-3a4 4 0 0 0-5.7-5.7l-1 1M14 10a4 4 0 0 0-5.7 0l-3 3a4 4 0 0 0 5.7 5.7l1-1"/></svg>Enlace público activo</div>
+                </div>
+                <div class="pantalla">
+                  <div class="pt-titulo">Asistente</div>
+                  <div class="pt-msj pt-msj--yo">¿Cómo cierra el mes Remarketing?</div>
+                  <div class="pt-paso">Consultando Meta Ads · Calculando ritmo</div>
+                  <div class="pt-veredicto"><b>Bien</b> Vas en ritmo: gastaste el 66% con el 68% del mes. Cerrás en <b>~$590 mil</b> y <b>~610</b> conversiones.</div>
+                  <div class="pt-entrada"><span>Preguntá o dictá…</span><svg class="ic" viewBox="0 0 24 24"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5 11a7 7 0 0 0 14 0M12 18v3"/></svg></div>
+                </div>
+              </div>
+            </div>
+            <div class="relato__puntos"><i class="activo"></i><i></i><i></i><i></i></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= IA ================= -->
+    <section class="seccion seccion--noche" id="ia">
+      <div class="noche__trama" aria-hidden="true"></div>
+      <div class="contenedor">
+        <header class="seccion__cab seccion__cab--claro revelar">
+          <p class="sobretitulo">Inteligencia artificial</p>
+          <h2>Una IA incluida <em>sin cargo.</em> O la que ya usás.</h2>
+          <p>Todos los equipos tienen el asistente de Tech&amp;Grow incluido. Si preferís modelos más avanzados, conectás tu propia cuenta de una IA de pago.</p>
+        </header>
+
+        <div class="ia">
+          <div class="chat-demo vidrio revelar">
+            <div class="chat-demo__cab">
+              <span class="objeto objeto--naranja"><svg class="ic" viewBox="0 0 24 24"><path d="M12 3l1.8 4.7 4.7 1.8-4.7 1.8L12 16l-1.8-4.7-4.7-1.8 4.7-1.8z"/></svg></span>
+              <div><b>Asistente</b><small data-modelo>Modelo: IA de Tech&amp;Grow · incluida</small></div>
+              <span class="chat-demo__vivo"><i></i>en línea</span>
+            </div>
+            <div class="chat-demo__cuerpo" data-chat></div>
+            <div class="chat-demo__entrada"><span data-chat-entrada>Preguntale algo a tus campañas…</span>
+              <svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </div>
+          </div>
+
+          <div class="ia__opciones">
+            <div class="interruptor revelar" role="radiogroup" aria-label="Elegí tu IA">
+              <button type="button" role="radio" aria-checked="true" class="activo" data-ia="incluida">IA incluida</button>
+              <button type="button" role="radio" aria-checked="false" data-ia="propia">Tu IA de pago</button>
+              <span class="interruptor__marca" aria-hidden="true"></span>
+            </div>
+            <article class="ia-tarjeta activa revelar" style="--d:.05s" data-ia-tarjeta="incluida">
+              <div class="ia-tarjeta__cab"><h3>IA de Tech&amp;Grow</h3><span class="precio"><b>$0</b> incluida</span></div>
+              <ul class="lista-check">
+                <li>Preguntas sobre campañas, clientes y equipo en lenguaje natural</li>
+                <li>Cálculos de CPA, ROAS y ritmo de gasto al instante</li>
+                <li>Proyecciones de cierre de mes y avisos cuando algo se desvía</li>
+                <li>Borradores de informes y mensajes para clientes</li>
+              </ul>
+            </article>
+            <article class="ia-tarjeta revelar" style="--d:.1s" data-ia-tarjeta="propia">
+              <div class="ia-tarjeta__cab"><h3>Traé tu propia IA</h3><span class="precio precio--alt">Opcional</span></div>
+              <ul class="lista-check">
+                <li>Conectá tu cuenta de proveedores como OpenAI, Anthropic o Google</li>
+                <li>Modelos avanzados para análisis más profundos</li>
+                <li>Pagás directo al proveedor, sólo lo que usás</li>
+                <li>Cambiás de modelo cuando quieras, sin perder nada</li>
+              </ul>
+            </article>
+            <p class="ia__pie revelar">La IA respeta los rangos: sólo consulta lo que la persona que pregunta tiene permitido ver.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= DATOS ================= -->
+    <section class="seccion" id="datos">
+      <div class="contenedor">
+        <header class="seccion__cab revelar">
+          <p class="sobretitulo">Decidí con datos</p>
+          <h2>Menos tiempo armando reportes. <em>Más tiempo haciendo crecer.</em></h2>
+        </header>
+
+        <div class="cifras">
+          <div class="cifra tarjeta revelar"><b><span data-contar="1">0</span></b><span>lugar para campañas, clientes, reportes y equipo</span></div>
+          <div class="cifra tarjeta revelar" style="--d:.06s"><b><span data-contar="2">0</span></b><span>plataformas publicitarias conectadas: Meta y Google</span></div>
+          <div class="cifra tarjeta revelar" style="--d:.12s"><b>$<span data-contar="0">0</span></b><span>de costo extra por la IA integrada</span></div>
+          <div class="cifra tarjeta revelar" style="--d:.18s"><b><span data-contar="4">0</span></b><span>rangos con permisos por ventana</span></div>
+        </div>
+
+        <div class="graficos">
+          <figure class="tarjeta grafico-tarjeta revelar">
+            <figcaption>
+              <h3>Proyección de gasto del mes</h3>
+              <p>Así te muestra el asistente cómo cerrás. Campaña de ejemplo, presupuesto de $600.000.</p>
+              <div class="leyenda">
+                <span><i class="clave clave--ideal"></i>Ritmo ideal</span>
+                <span><i class="clave clave--real"></i>Gasto real</span>
+                <span><i class="clave clave--proy"></i>Proyección</span>
+              </div>
+            </figcaption>
+            <div class="grafico" data-grafico-linea></div>
+            <details class="tabla-datos"><summary>Ver datos en tabla</summary><div data-tabla-linea></div></details>
+          </figure>
+
+          <figure class="tarjeta grafico-tarjeta revelar" style="--d:.08s">
+            <figcaption>
+              <h3>Horas que se recuperan por semana</h3>
+              <p>Escenario ilustrativo para un equipo que gestiona 10 clientes.</p>
+            </figcaption>
+            <div class="grafico" data-grafico-barras></div>
+            <div class="grafico-total"><b>13,5 h</b> por semana para pensar estrategia, no para copiar números.</div>
+          </figure>
+        </div>
+
+        <div class="comparar revelar">
+          <div class="comparar__col tarjeta">
+            <h3>Hoy, con todo separado</h3>
+            <ul class="lista-x">
+              <li>Un administrador de anuncios por plataforma</li>
+              <li>Reportes armados a mano en planillas</li>
+              <li>Capturas de pantalla perdidas en el chat</li>
+              <li>Accesos compartidos sin control</li>
+            </ul>
+          </div>
+          <div class="comparar__flecha" aria-hidden="true"><svg class="ic" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div>
+          <div class="comparar__col comparar__col--tg tarjeta">
+            <h3>Con Tech<span class="marca__amp">&amp;</span>Grow</h3>
+            <ul class="lista-check">
+              <li>Meta y Google en un mismo tablero</li>
+              <li>Informes y proyecciones en segundos</li>
+              <li>El chat del equipo al lado de los datos</li>
+              <li>Rangos claros y verificación en dos pasos</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= PREGUNTAS ================= -->
+    <section class="seccion seccion--tinte" id="preguntas">
+      <div class="contenedor contenedor--angosto">
+        <header class="seccion__cab revelar">
+          <p class="sobretitulo">Preguntas frecuentes</p>
+          <h2>Lo que nos suelen preguntar</h2>
+        </header>
+        <div class="faq">
+          <details class="revelar"><summary>¿Qué plataformas publicitarias conecta?</summary><p>Meta (Facebook e Instagram) y Google Ads. Las conectás una vez y los datos se actualizan solos.</p></details>
+          <details class="revelar"><summary>¿La inteligencia artificial tiene costo?</summary><p>No. El asistente de Tech&amp;Grow viene incluido sin cargo adicional. Sólo pagás aparte si decidís conectar tu propia cuenta de una IA de pago, y ese costo lo cobra directamente el proveedor.</p></details>
+          <details class="revelar"><summary>¿Puedo usar la IA que ya pago?</summary><p>Sí. Podés conectar tu cuenta de proveedores como OpenAI, Anthropic o Google y elegir qué modelo usa el asistente.</p></details>
+          <details class="revelar"><summary>¿Cómo funcionan los rangos?</summary><p>Hay cuatro: Admin, Chief, Senior y Junior. Cada rango tiene ventanas habilitadas por defecto, y el Admin puede ajustarlas persona por persona. La IA respeta esos mismos permisos.</p></details>
+          <details class="revelar"><summary>¿Puedo compartir resultados con mis clientes?</summary><p>Sí. Cualquier tablero se puede compartir con un enlace de sólo lectura, y lo desactivás cuando quieras.</p></details>
+          <details class="revelar"><summary>¿Funciona en el celular?</summary><p>Sí. Tech&amp;Grow se usa desde el navegador y se puede instalar como app en el celular, con modo claro y oscuro.</p></details>
+          <details class="revelar"><summary>¿Qué pasa en la demo?</summary><p>Charlamos sobre tu equipo y tus clientes, te mostramos la plataforma con un caso parecido al tuyo y armamos juntos cómo empezar. Sin compromiso.</p></details>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= DEMO ================= -->
+    <section class="seccion" id="demo">
+      <div class="contenedor">
+        <div class="cta revelar">
+          <div class="cta__texto">
+            <p class="sobretitulo">Agendá tu demo</p>
+            <h2>Mirá Tech&amp;Grow funcionando <em>con tus campañas.</em></h2>
+            <p>Completá tus datos y se abre tu correo con la solicitud lista para enviar. Te respondemos para coordinar día y horario.</p>
+            <ul class="lista-check lista-check--claro">
+              <li>Demo personalizada de 30 minutos</li>
+              <li>Sin costo y sin compromiso</li>
+              <li>Respuesta por mail</li>
+            </ul>
+            <p class="cta__mail">¿Preferís escribir directo?
+              <a href="mailto:nrrosendi@gmail.com" data-mailto>nrrosendi@gmail.com</a>
+              <button class="copiar-boton" type="button" data-copiar="nrrosendi@gmail.com">Copiar</button>
+            </p>
+          </div>
+
+          <form class="formulario vidrio" data-formulario novalidate>
+            <div class="campo-form">
+              <label for="f-nombre">Nombre y apellido</label>
+              <input id="f-nombre" name="nombre" type="text" autocomplete="name" required placeholder="Ej: Sofía Díaz">
+            </div>
+            <div class="campo-form">
+              <label for="f-empresa">Empresa o agencia</label>
+              <input id="f-empresa" name="empresa" type="text" autocomplete="organization" required placeholder="Ej: Estudio Norte">
+            </div>
+            <div class="campo-fila">
+              <div class="campo-form">
+                <label for="f-email">Email</label>
+                <input id="f-email" name="email" type="email" autocomplete="email" required placeholder="vos@empresa.com">
+              </div>
+              <div class="campo-form">
+                <label for="f-equipo">Tamaño del equipo</label>
+                <select id="f-equipo" name="equipo">
+                  <option>Sólo yo</option>
+                  <option selected>2 a 10 personas</option>
+                  <option>11 a 50 personas</option>
+                  <option>Más de 50 personas</option>
+                </select>
+              </div>
+            </div>
+            <div class="campo-form">
+              <label for="f-mensaje">¿Qué te gustaría resolver? <span class="opcional">(opcional)</span></label>
+              <textarea id="f-mensaje" name="mensaje" rows="3" placeholder="Ej: reportes mensuales de 8 clientes en Meta y Google"></textarea>
+            </div>
+            <button class="boton boton--primario boton--grande boton--bloque" type="submit">
+              Solicitar demo por mail
+              <svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </button>
+            <p class="formulario__ayuda" data-formulario-ayuda role="status">Se abre tu aplicación de correo con el mensaje listo.</p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="pie">
+    <div class="contenedor pie__fila">
+      <a href="#inicio" class="marca">
+        <img class="marca__logo" src="assets/img/logo.svg" alt="" width="28" height="28">
+        <span class="marca__texto">Tech<span class="marca__amp">&amp;</span>Grow</span>
+      </a>
+      <p>Tus campañas, explicadas.</p>
+      <nav aria-label="Pie de página">
+        <a href="#producto">Producto</a>
+        <a href="#ia">IA</a>
+        <a href="#preguntas">Preguntas</a>
+        <a href="mailto:nrrosendi@gmail.com" data-mailto>Contacto</a>
+      </nav>
+      <small>© <span data-anio>2026</span> Tech&amp;Grow</small>
+    </div>
+  </footer>
+
+  <a class="flotante" href="#demo">
+    <svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16v12H4zM4 7l8 6 8-6"/></svg>
+    Agendar demo
+  </a>
+
+  <script src="assets/js/main.js" defer></script>
+</body>
+</html>
