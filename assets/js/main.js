@@ -33,7 +33,7 @@
   pintarBotonTema();
 
   /* ---------- Mailto con asunto y cuerpo armados ---------- */
-  var cuerpoBase = 'Hola, quiero agendar una demo de Tech&Grow.\n\nNombre:\nEmpresa o agencia:\nTamaño del equipo:\n¿Qué me gustaría resolver?:\n\n¡Gracias!';
+  var cuerpoBase = 'Hola, quiero agendar una demo de Tech&Grow.\n\nNombre:\nEmpresa o agencia:\nTamaño del equipo:\nPara cuándo lo necesito:\n¿Qué me gustaría resolver?:\n\n¡Gracias!';
   $$('[data-mailto]').forEach(function (a) { a.href = mailto(cuerpoBase); });
 
   /* ---------- Nav: fondo al bajar, menú móvil, sección activa ---------- */
@@ -141,20 +141,19 @@
   }
 
   /* ---------- Rangos ---------- */
-  var VENTANAS = ['Inicio', 'Asistente', 'Tableros', 'Campañas', 'Clientes', 'CRM', 'Documentos', 'Planillas', 'Equipo', 'Conectores', 'Administración'];
+  var VENTANAS = ['Inicio', 'Asistente', 'Tableros', 'Campañas', 'Clientes', 'CRM', 'Documentos', 'Planillas', 'Equipo', 'Conectores', 'Sistemas'];
   var RANGOS = [
-    { clave: 'admin', nombre: 'Admin', titulo: 'Ve y configura todo',
-      desc: 'Dirección del equipo. Define quién ve qué, conecta las cuentas y elige con qué IA trabaja la organización.',
-      ventanas: VENTANAS.slice(),
-      tareas: ['Conecta Meta, Google y las credenciales de cada cliente', 'Asigna rangos y ajusta permisos ventana por ventana', 'Elige la IA incluida o conecta una de pago', 'Activa la verificación en dos pasos del equipo'] },
+    { clave: 'admin', nombre: 'Admin', titulo: 'Configuración inicial',
+      desc: 'Se asigna a un admin experto, que aplica los permisos iniciales de cada rango para que el equipo arranque bien configurado.',
+      ventanas: null, tareas: null },
     { clave: 'chief', nombre: 'Chief', titulo: 'Lidera cuentas y clientes',
-      desc: 'Responsable de un grupo de clientes. Ve todas sus campañas y coordina al equipo que trabaja en ellas.',
+      desc: 'Responsable de un grupo de clientes. Ve todas sus campañas y coordina al equipo; no toca la parte de sistemas.',
       ventanas: ['Inicio', 'Asistente', 'Tableros', 'Campañas', 'Clientes', 'CRM', 'Documentos', 'Planillas', 'Equipo', 'Conectores'],
       tareas: ['Arma tableros y los comparte con cada cliente', 'Revisa la pista de todas las campañas a cargo', 'Reparte el trabajo en el chat del equipo', 'Aprueba informes antes de enviarlos'] },
     { clave: 'senior', nombre: 'Senior', titulo: 'Analiza y optimiza',
       desc: 'El que se mete en los números. Usa el asistente para calcular, proyectar y preparar los informes.',
       ventanas: ['Inicio', 'Asistente', 'Tableros', 'Campañas', 'Clientes', 'Documentos', 'Planillas', 'Equipo'],
-      tareas: ['Consulta campañas y compara Meta contra Google', 'Pide proyecciones de cierre de mes al asistente', 'Redacta informes y diapositivas para clientes', 'Avisa al Chief cuando una campaña se desvía'] },
+      tareas: ['Consulta campañas y compara Meta, Google y LinkedIn', 'Pide proyecciones de cierre de mes al asistente', 'Redacta informes y diapositivas para clientes', 'Avisa al Chief cuando una campaña se desvía'] },
     { clave: 'junior', nombre: 'Junior', titulo: 'Acompaña y aprende',
       desc: 'Se suma al día a día con lo justo y necesario. Ve tableros y colabora sin tocar configuraciones sensibles.',
       ventanas: ['Inicio', 'Asistente', 'Tableros', 'Planillas', 'Equipo'],
@@ -175,6 +174,8 @@
     ins.textContent = r.nombre;
     $('[data-rango-titulo]', panel).textContent = r.titulo;
     $('[data-rango-desc]', panel).textContent = r.desc;
+    $('[data-rango-detalle]', panel).hidden = !r.ventanas;
+    if (!r.ventanas) { panel.classList.remove('cambia'); void panel.offsetWidth; panel.classList.add('cambia'); return; }
     $('[data-rango-ventanas]', panel).innerHTML = VENTANAS.map(function (v) {
       var si = r.ventanas.indexOf(v) !== -1;
       return '<span class="permiso-chip' + (si ? ' si' : '') + '"' + (si ? '' : ' aria-label="' + v + ': sin acceso"') + '>' + v + '</span>';
@@ -252,7 +253,7 @@
       tono: 'Bien',
       respuesta: 'Gastaste <b>$396.000 de $600.000</b> con el 68% del mes transcurrido: vas en ritmo. El CPA bajó <b>14%</b> y Remarketing explica casi todo el ahorro. Si seguís así, cerrás en <b>~$590.000</b>.' },
     { pregunta: '¿Qué campaña me conviene mover esta semana?',
-      pasos: ['Comparando Meta y Google', 'Revisando la pista de cada campaña'],
+      pasos: ['Comparando Meta, Google y LinkedIn', 'Revisando la pista de cada campaña'],
       tono: 'Atención',
       respuesta: '<b>Búsqueda de marca</b> ya usó el 86% del presupuesto y se queda sin saldo en ~5 días. Te sugiero pasar <b>$60.000</b> desde Lanzamiento otoño, que viene atrasada.' }
   ];
@@ -418,7 +419,7 @@
 
   var HORAS = [
     { cat: 'Armar reportes para clientes', h: 4.5 },
-    { cat: 'Bajar datos de Meta y Google', h: 3 },
+    { cat: 'Bajar datos de cada plataforma', h: 3 },
     { cat: 'Calcular proyecciones', h: 2.5 },
     { cat: 'Explicar resultados', h: 2 },
     { cat: 'Coordinar con el equipo', h: 1.5 }
@@ -490,6 +491,7 @@
       'Empresa o agencia: ' + f.empresa.value.trim() + '\n' +
       'Email: ' + f.email.value.trim() + '\n' +
       'Tamaño del equipo: ' + f.equipo.value + '\n' +
+      'Para cuándo lo necesito: ' + f.urgencia.value + '\n' +
       (f.mensaje.value.trim() ? '\nQué me gustaría resolver:\n' + f.mensaje.value.trim() + '\n' : '') +
       '\n¡Gracias!';
     window.location.href = mailto(cuerpo);
